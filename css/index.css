@@ -698,6 +698,7 @@ header .mega-menu li a i {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 40px;
+  padding: 0 50px;
 }
 
 .team .box {
@@ -708,6 +709,7 @@ header .mega-menu li a i {
   border-radius: 10px;
   justify-content: space-between;
   padding: 15px;
+  margin: auto;
   position: relative;
 }
 
@@ -732,7 +734,7 @@ header .mega-menu li a i {
 }
 
 .team .box .image-holder {
-  width: 275px;
+  width: 250px;
   height: 275px;
   position: absolute;
   border-radius: 10px;
