@@ -698,18 +698,10 @@ header .mega-menu li a i {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 40px;
-  padding: 0 40px;
 }
 
 .team .box {
-  background-color: #f3f3f3;
-  display: flex;
-  height: 425px;
-  width: 275px;
-  border-radius: 10px;
-  justify-content: space-between;
-  padding: 15px;
-  margin: auto;
+  padding: 15px 20px 15px 0;
   position: relative;
 }
 
@@ -718,64 +710,82 @@ header .mega-menu li a i {
   position: absolute;
   top: 0;
   right: 0;
-  width: 0;
-  height: 100%;
-  background-color: #e4e4e4;
   border-radius: 10px;
+  height: 100%;
+  width: calc(100% - 60px);
+  background: #f3f3f3;
+  z-index: -1;
   transition: var(--main-transition-duration);
 }
 
-.team .box-holder:hover img {
+.team .box::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 10px;
+  height: 100%;
+  width: 0;
+  background: #e4e4e4;
+  z-index: -1;
+  transition: var(--main-transition-duration);
+}
+
+.team .box:hover::after {
+  width: calc(100% - 60px);
+}
+
+.team .box:hover .main-info img {
   filter: grayscale(100%);
 }
 
-.team .box-holder:hover .box::before {
-  width: 100%;
+.team .box:hover .secondary-info h3 {
+  color: #777777;
+}
+.team .box .main-info {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0 10px 0;
 }
 
-.team .box .image-holder {
-  width: 250px;
-  height: 275px;
-  position: absolute;
+.team .box .main-info img {
+  width: calc(100% - 60px);
   border-radius: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 53px;
-  overflow: hidden;
-}
-
-.team .box .image-holder img {
-  max-width: 100%;
   transition: var(--main-transition-duration);
 }
 
-.team .box .info {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  z-index: 10;
-}
-
-.team .box .socials {
+.team .box .main-info .social {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  z-index: 10;
+  margin-right: 10px;
 }
 
-.team .box .socials a {
-  display: block;
+.team .box .main-info .social a {
+  display: flex;
+  justify-content: center;
   margin: 15px 0;
   color: #777777;
 }
 
-.team .box h3 {
+.team .box .main-info .social a:hover {
+  color: var(--main-color);
+}
+
+.team .box .secondary-info {
+  width: fit-content;
+  margin: auto;
+  margin-top: 15px;
+}
+
+.team .box .secondary-info h3 {
   color: var(--main-color);
   font-size: 22px;
-  font-weight: bold;
+  padding: 10px 0;
+  transition: var(--main-transition-duration);
 }
 /* End Team Section */
+
 
 /* Start Animation */
 @keyframes up-and-down {
