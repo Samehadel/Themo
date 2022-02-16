@@ -661,7 +661,7 @@ header .mega-menu li a i {
 .testimonials .box img {
   position: absolute;
   top: -50px;
-  right: 30px;
+  right: -10px;
   height: 100px;
   width: 100px;
   border-radius: 50px;
@@ -967,9 +967,15 @@ header .mega-menu li a i {
 .works img {
   margin-right: 10px;
   padding: 20px;
-  flex: 1;
   max-width: 100%;
 }
+
+@media (max-width: 991px) {
+  .works img {
+    margin: 0;
+  }
+}
+
 .works .info {
   flex: 1;
   margin-left: 10px;
