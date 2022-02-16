@@ -661,7 +661,7 @@ header .mega-menu li a i {
 .testimonials .box img {
   position: absolute;
   top: -50px;
-  right: -15px;
+  right: 30px;
   height: 100px;
   width: 100px;
   border-radius: 50px;
