@@ -940,6 +940,9 @@ header .mega-menu li a i {
   text-align: center;
   width: 35px;
   height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* End Skills Section */
@@ -982,6 +985,12 @@ header .mega-menu li a i {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+  .works .info {
+    margin: 0;
+  }
 }
 
 .works .box {
